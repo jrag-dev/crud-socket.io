@@ -1,0 +1,30 @@
+{
+  "name": "crud-notes-socket",
+  "version": "1.0.0",
+  "description": "app of notes with node js and socket.io",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon src/index.js --exec babel-node --ignore src/public",
+    "build": "babel src -d dist && ncp src/public/index.html dist/public/index.html && ncp src/public/main.css dist/public/main.css",
+    "start": "node dist/index.js"
+  },
+  "keywords": [
+    "nodejs",
+    "socket.io"
+  ],
+  "author": "José Alvarado",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/cli": "^7.20.7",
+    "@babel/core": "^7.20.12",
+    "@babel/node": "^7.20.7",
+    "@babel/preset-env": "^7.20.2",
+    "nodemon": "^2.0.20"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "ncp": "^2.0.0",
+    "socket.io": "^4.6.0",
+    "uuid": "^9.0.0"
+  }
+}
